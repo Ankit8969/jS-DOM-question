@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.accordion_box{
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.accordion_content{
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.first-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid grey;
+    cursor: pointer;
+}
+.add-icon{
+    width: 20px;
+    height: 20px;
+}
+.second-section{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
