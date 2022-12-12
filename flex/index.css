@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS STYLING FOR NAVBAR */
+.heading{
+    background-color: red;
+    text-align: center;
+    margin: 10px 0;
+}
+ul{
+    list-style-type: none;
+}
+.navbar{
+    min-height: 65px;
+    padding: 0 20px;
+    background-color: skyblue;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links{
+    display: flex;
+}
+.links .link{
+    margin: 0 10px;
+}
+@media screen and (max-width: 780px){
+    .navbar{
+        flex-direction: column;
+        margin: 0;
+        padding:0;
+    }
+    .links{
+        cursor: pointer;
+        width: 100%;
+        padding-left: 0;
+        flex-direction: column;
+    }
+    .link{
+        height: 45px;
+        line-height: 45px;
+        margin: 0 !important;
+        padding-left: 10px;
+    }
+    .link:hover{
+        background-color: rgb(22, 90, 117);
+    }
+}
+
+/* CSS STYLING FOR LAYOUT */
+
+section{
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+.layout{
+    display: flex;
+    flex-direction: column;
+}
+.left-side-content{
+    background-color: yellow;
+    width: 300px;
+}
+.right-side-content{
+    width: 300px;
+    background-color: rgb(101, 60, 239);
+}
+.content{
+    background-color: red;
+    display: flex;
+    flex-grow: 1;
+}
+.layout_navbar{
+    height: 100px;
+    background-color: blue;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    color: white;
+}
+footer{
+    height: 100px;
+    background-color: green;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Styling for Centring a Div */
+.parent{
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.child{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+}
