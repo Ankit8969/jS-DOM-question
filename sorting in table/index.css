@@ -1,0 +1,36 @@
+.names{
+    width: 300px;
+    margin: auto;
+    border: 1px solid black;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.name-box{
+    flex-grow: 1;
+}
+.image-sort{
+    height: 45px;
+    background-color: rgb(205, 205, 205);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.image-sort img{
+    width: 20px;
+    height: 20px;
+}
+.individual-name{
+    height: 25px;
+    padding: 10px;
+    border: 1px solid;
+}
+.individual-name:nth-of-type(odd){
+    background-color: rgb(46, 161, 136);
+}
+.individual-name:nth-of-type(even){
+    background-color: rgb(145, 214, 145);
+}
