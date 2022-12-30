@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    padding:0;
+}
+.cards-block{
+    margin:auto;
+    width: 50%;;
+}
+.cards{
+    border: 2px solid;
+    border-radius: 4px;
+    padding: 20px 30px;
+    width: 100px;
+    margin-bottom: 10px;
+    visibility: hidden;
+}
+.show{
+    visibility: visible;
+}
