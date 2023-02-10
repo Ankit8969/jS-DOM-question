@@ -1,0 +1,31 @@
+The Promise.all() static method takes an iterable of promises as input and returns a single Promise. 
+This returned promise fulfills when all of the input's promises fulfill (including when an empty iterable is passed), 
+with an array of the fulfillment values. It rejects when any of the input's promises rejects, with this first 
+rejection reason.
+
+***************************
+
+const myPromise1 = new Promise((resolve, reject)=>{
+    // resolve("Hey There!");
+    setTimeout(()=>{
+        reject("foo1");
+    },1000)
+});
+const myPromise2 = new Promise((resolve, reject)=>{
+    // resolve("Hey There!");
+    setTimeout(()=>{
+        resolve("foo2");
+    },1000)
+});
+const myPromise3 = new Promise((resolve, reject)=>{
+    // resolve("Hey There!");
+    setTimeout(()=>{
+        resolve("foo3");
+    },3000)
+});
+
+Promise.all([myPromise2, myPromise3,myPromise1]).then((res)=>{
+    console.log(res);
+}).catch((err)=>{
+    console.log("Error:- ", err);
+})
