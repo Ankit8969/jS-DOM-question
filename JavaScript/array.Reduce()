@@ -1,0 +1,29 @@
+const express = require('express');
+const app = express();
+
+let arr = [1,2,3,4,5];
+
+function sum(total, individualValue, index, array){
+    total = total + individualValue;
+    console.log(total, individualValue, index, array);
+    return total;
+}
+let ans = arr.reduce(sum, 10);
+console.log(ans);
+
+
+app.listen(5001,()=>{
+    console.log('port is running');
+})
+
+
+
+
+/**************************/
+11 1 0 [ 1, 2, 3, 4, 5 ]
+13 2 1 [ 1, 2, 3, 4, 5 ]
+16 3 2 [ 1, 2, 3, 4, 5 ]
+20 4 3 [ 1, 2, 3, 4, 5 ]
+25 5 4 [ 1, 2, 3, 4, 5 ]
+25
+/***********************/
