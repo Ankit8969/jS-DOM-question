@@ -1,0 +1,12 @@
+
+const myPromise = new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    resolve("Hey There Resolved");
+  },1000);
+})
+
+myPromise.then((res)=>{
+  console.log("GOt Resolve Query:- ", res);
+}).catch((err)=>{
+  console.log("Got Unresolved Query");
+});
