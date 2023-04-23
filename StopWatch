@@ -1,0 +1,47 @@
+import React, { useState, useEffect, useRef } from "react";
+import { render } from "react-dom";
+import { folder } from "./folder";
+import VSCode from "./vscode";
+import "./index.css";
+
+const App = () => {
+  const [timer, setTimer] = useState(0);
+  const [flag, setFlag] = useState(false);
+  const timerId = useRef(null);
+
+  const handleStart = () => {
+    if (flag) return;
+    setFlag(true);
+    timerId.current = setInterval(() => {
+      setTimer((timer)=>timer + 1);
+    }, 100);
+  };
+
+  const handleResume = () => {
+    clearInterval(timerId.current);
+    setFlag(false);
+  };
+
+  const handleReset = () => {
+    setTimer(0);
+    clearInterval(timerId.current);
+    setFlag(false);
+  };
+
+  return (
+    <>
+      <span> {parseInt(timer/60)}:{parseInt(timer%60)} </span>
+      <br />
+      <button disabled={flag} onClick={() => handleStart()}>
+        START{" "}
+      </button>
+      <button onClick={handleResume}> RESUME </button>
+      <button disabled={!flag} onClick={handleReset}>
+        {" "}
+        RESET{" "}
+      </button>
+    </>
+  );
+};
+
+render(<App />, document.getElementById("root"));
